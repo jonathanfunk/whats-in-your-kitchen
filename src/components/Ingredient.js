@@ -6,7 +6,7 @@ const Ingredient = ({ ingredient }) => {
 
   return (
     <li>
-      {ingredient.ingredient}
+      {ingredient.value}
       <button onClick={() => deleteIngredient(ingredient.id)}>x</button>
     </li>
   );

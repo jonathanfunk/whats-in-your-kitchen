@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
+
+.react-autosuggest__container {
+  @apply relative;
+}
+
+.react-autosuggest__input--open {
+  @apply rounded-b-none;
+}
+
+.react-autosuggest__input {
+  @apply bg-white px-4 py-3 pr-32 rounded-full w-full border border-orange-400;
+}
+.react-autosuggest__input--focused {
+  @apply outline-none border-orange-700;
+}
+
+.react-autosuggest__suggestions-container--open {
+  @apply block absolute  w-full border border-orange-400 bg-white z-10;
+}
+
+.react-autosuggest__suggestion {
+  @apply px-4 py-3 cursor-pointer;
+}
+
 @tailwind utilities;

@@ -5,6 +5,7 @@ import { GlobalContext } from '../context/GlobalState';
 
 const IngredientsList = () => {
   const { ingredients } = useContext(GlobalContext);
+  console.log(ingredients);
   return (
     <ul>
       {ingredients.map(ingredient => (

@@ -606,6 +606,51 @@ video {
   }
 }
 
+.react-autosuggest__container {
+  position: relative;
+}
+
+.react-autosuggest__input--open {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.react-autosuggest__input {
+  background-color: #fff;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-right: 8rem;
+  border-radius: 9999px;
+  width: 100%;
+  border-width: 1px;
+  border-color: #f6ad55;
+}
+
+.react-autosuggest__input--focused {
+  outline: 0;
+  border-color: #c05621;
+}
+
+.react-autosuggest__suggestions-container--open {
+  display: block;
+  position: absolute;
+  width: 100%;
+  border-width: 1px;
+  border-color: #f6ad55;
+  background-color: #fff;
+  z-index: 10;
+}
+
+.react-autosuggest__suggestion {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  cursor: pointer;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
