@@ -1,11 +1,14 @@
 import React from 'react';
 import Header from './components/Header';
+import { GlobalProvider } from './context/GlobalState';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-    </div>
+    <GlobalProvider>
+      <div className="App">
+        <Header />
+      </div>
+    </GlobalProvider>
   );
 }
 
