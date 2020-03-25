@@ -4,9 +4,9 @@ import IngredientsList from './IngredientsList';
 
 const Header = () => {
   return (
-    <header className="bg-orange-400 min-h-40vh p-8 flex justify-center items-center">
+    <header className="header">
       <div>
-        <h1 className="text-white text-4xl leading-none text-center font-bold mb-12">
+        <h1 className="text-white text-4xl leading-none text-center font-semibold mb-8">
           What's in your kitchen?
         </h1>
         <AddIngredient />
