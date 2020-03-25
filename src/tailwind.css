@@ -3,8 +3,8 @@
 @tailwind components;
 
 .header {
-  @apply bg-orange-400 min-h-60vh p-8 flex justify-center items-center bg-cover bg-center;
   background: url('./images/wiyk-bg.jpg');
+  @apply bg-orange-400 min-h-60vh p-8 pt-16 flex justify-center bg-cover bg-center;
 }
 
 .react-autosuggest__container {

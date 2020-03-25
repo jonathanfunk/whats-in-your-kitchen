@@ -609,15 +609,15 @@ video {
 }
 
 .header {
+  background: url('./images/wiyk-bg.jpg');
   background-color: #f6ad55;
   min-height: 60vh;
   padding: 2rem;
+  padding-top: 4rem;
   display: flex;
   justify-content: center;
-  align-items: center;
   background-size: cover;
   background-position: center;
-  background: url('./images/wiyk-bg.jpg');
 }
 
 .react-autosuggest__container {

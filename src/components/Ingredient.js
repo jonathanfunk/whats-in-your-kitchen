@@ -5,9 +5,11 @@ const Ingredient = ({ ingredient }) => {
   const { deleteIngredient } = useContext(GlobalContext);
 
   return (
-    <li>
+    <li
+      className="bg-orange-100 px-2 inline-block rounded-full mr-1"
+      onClick={() => deleteIngredient(ingredient.id)}
+    >
       {ingredient.value}
-      <button onClick={() => deleteIngredient(ingredient.id)}>x</button>
     </li>
   );
 };

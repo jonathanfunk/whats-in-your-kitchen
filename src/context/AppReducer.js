@@ -10,7 +10,7 @@ export default (state, action) => {
     case 'ADD_INGREDIENT':
       return {
         ...state,
-        ingredients: [action.payload, ...state.ingredients]
+        ingredients: [...state.ingredients, action.payload]
       };
     default:
       return state;
