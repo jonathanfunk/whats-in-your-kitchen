@@ -7,6 +7,18 @@
   @apply bg-orange-400 min-h-60vh p-8 pt-16 flex justify-center bg-cover bg-center;
 }
 
+@screen md {
+  .header {
+    @apply min-h-40vh;
+  }
+}
+
+@screen lg {
+  .header {
+    @apply min-h-screen w-40vw pt-8 items-center;
+  }
+}
+
 .react-autosuggest__container {
   @apply relative;
 }

@@ -12,7 +12,7 @@ const Header = () => {
           src={fridgeIcon}
           alt="Fridge Icon"
         />
-        <h1 className="text-white text-4xl leading-none text-center font-semibold mb-8 h-">
+        <h1 className="text-white text-4xl leading-none text-center font-semibold mb-8 lg:text-5xl">
           What's in your kitchen?
         </h1>
         <AddIngredient />

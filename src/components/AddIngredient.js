@@ -92,7 +92,10 @@ const AddIngredient = () => {
   };
 
   return (
-    <form className="w-full max-w-sm mb-4 relative" onSubmit={onSubmit}>
+    <form
+      className="w-full m-auto max-w-sm lg:max-w-md mb-4 relative"
+      onSubmit={onSubmit}
+    >
       <Autosuggest
         suggestions={suggestions.slice(0, 6)}
         onSuggestionsFetchRequested={onSuggestionsFetchRequested}
