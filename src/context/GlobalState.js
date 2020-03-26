@@ -3,7 +3,9 @@ import AppReducer from './AppReducer';
 
 // Initial state
 const initialState = {
-  ingredients: []
+  ingredients: [],
+  recipes: null,
+  loading: false
 };
 
 // Create context
