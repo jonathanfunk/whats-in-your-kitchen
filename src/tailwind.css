@@ -4,7 +4,7 @@
 
 .header {
   background: url('./images/wiyk-bg.jpg');
-  @apply bg-orange-400 min-h-60vh p-8 pt-16 flex justify-center bg-cover bg-center;
+  @apply bg-orange-400 min-h-60vh p-8 flex justify-center items-center bg-cover bg-center;
 }
 
 @screen md {
@@ -15,7 +15,7 @@
 
 @screen lg {
   .header {
-    @apply min-h-screen w-40vw pt-8 items-center;
+    @apply min-h-screen w-40vw;
   }
 }
 
@@ -28,7 +28,7 @@
 }
 
 .react-autosuggest__input {
-  @apply bg-white px-4 py-3 pr-32 rounded-md w-full border border-orange-400;
+  @apply bg-white px-4 py-3 rounded-md w-full border border-orange-400;
 }
 .react-autosuggest__input--focused {
   @apply outline-none border-orange-500;

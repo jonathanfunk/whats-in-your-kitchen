@@ -6,7 +6,7 @@ import { GlobalContext } from '../context/GlobalState';
 const IngredientsList = () => {
   const { ingredients } = useContext(GlobalContext);
   return (
-    <ul>
+    <ul className="h-20">
       {ingredients.map(ingredient => (
         <Ingredient key={ingredient.id} ingredient={ingredient} />
       ))}

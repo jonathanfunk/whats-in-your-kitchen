@@ -23,17 +23,6 @@ const AddIngredient = () => {
     setSuggestion([]);
   };
 
-  const onSubmit = e => {
-    e.preventDefault();
-    const newIngredient = {
-      id: Math.floor(Math.random() * 100000000),
-      value
-    };
-    addIngredient(newIngredient);
-    setValue('');
-    console.log(value);
-  };
-
   const escapeRegexCharacters = str => {
     return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   };
@@ -92,10 +81,7 @@ const AddIngredient = () => {
   };
 
   return (
-    <form
-      className="w-full m-auto max-w-sm lg:max-w-md mb-4 relative"
-      onSubmit={onSubmit}
-    >
+    <form className="w-full m-auto max-w-sm lg:max-w-md mb-4 relative">
       <Autosuggest
         suggestions={suggestions.slice(0, 6)}
         onSuggestionsFetchRequested={onSuggestionsFetchRequested}
@@ -103,13 +89,8 @@ const AddIngredient = () => {
         getSuggestionValue={getSuggestionValue}
         renderSuggestion={renderSuggestion}
         inputProps={inputProps}
+        onSuggestionSelected={onSuggestionSelected}
       />
-      <button
-        className="absolute top-0 right-0 min-h-full text-sm font-bold uppercase tracking-wider pr-3 w-32 text-gray-900 hover:text-gray-700"
-        type="submit"
-      >
-        Add to list
-      </button>
     </form>
   );
 };

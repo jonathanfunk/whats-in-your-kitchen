@@ -6,7 +6,7 @@ const Ingredient = ({ ingredient }) => {
 
   return (
     <li
-      className="bg-orange-100 px-2 inline-block rounded-full mr-1 cursor-pointer"
+      className="bg-orange-100 px-2 inline-block rounded-full mx-1 mb-2 cursor-pointer"
       onClick={() => deleteIngredient(ingredient.id)}
     >
       {ingredient.value}
