@@ -1,21 +1,37 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import axios from 'axios';
+import { GlobalContext } from '../context/GlobalState';
 
 const Main = () => {
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(false);
+  const { ingredients } = useContext(GlobalContext);
+
+  const mergedIngredients = ingredients.map(ingredient => {
+    return encodeURIComponent(ingredient.value);
+  });
+
+  const encodedIngredients = mergedIngredients.join();
 
   const fetchRecipes = async e => {
     e.preventDefault();
     setLoading(true);
     try {
       const recipes = await axios.get(
-        `https://api.spoonacular.com/recipes/findByIngredients?ingredients=apples,flour,eggs,baking%20powder,sugar,cinnamon&number=10&ranking=1&ignorePantry=true&apiKey=${process.env.REACT_APP_API_KEY}`
+        `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${encodedIngredients}&number=30&ranking=1&ignorePantry=true&apiKey=${process.env.REACT_APP_API_KEY}`
       );
-      setRecipes(recipes.data);
+
+      const filteredRecipes = recipes.data.filter(recipe => {
+        return recipe.missedIngredientCount === 0;
+      });
+
+      console.log('Recipes is...', filteredRecipes);
+
+      setRecipes(filteredRecipes);
       setLoading(false);
     } catch (err) {
       console.log(err);
+      setLoading(false);
     }
   };
   return (
