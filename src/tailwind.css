@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @tailwind components;
 
+/*--------------------------------------------------------------
+# Header Styles
+--------------------------------------------------------------*/
+
 .header {
   background: url('./images/wiyk-bg.jpg');
   @apply bg-orange-400 min-h-60vh p-8 flex justify-center items-center bg-cover bg-center;
@@ -18,6 +22,10 @@
     @apply min-h-screen w-40vw;
   }
 }
+
+/*--------------------------------------------------------------
+# Input Form Styles
+--------------------------------------------------------------*/
 
 .react-autosuggest__container {
   @apply relative;
@@ -48,6 +56,26 @@
 
 .react-autosuggest__suggestion--highlighted {
   @apply bg-orange-200;
+}
+
+/*--------------------------------------------------------------
+# Recipe Grid Styles
+--------------------------------------------------------------*/
+
+.recipe-grid {
+  @apply grid gap-4 grid-cols-1;
+}
+
+@screen md {
+  .recipe-grid {
+    @apply grid-cols-2;
+  }
+}
+
+@screen xl {
+  .recipe-grid {
+    @apply grid-cols-3;
+  }
 }
 
 @tailwind utilities;
