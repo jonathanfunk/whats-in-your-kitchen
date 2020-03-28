@@ -13,7 +13,7 @@ const RecipesList = ({ recipes, loading }) => {
   } else {
     if (recipes.length > 0) {
       recipeItems = (
-        <div>
+        <div className="recipe-grid mb-10">
           {recipes.map(recipe => (
             <RecipeCard
               key={recipe.id}
@@ -24,7 +24,7 @@ const RecipesList = ({ recipes, loading }) => {
         </div>
       );
     } else {
-      recipeItems = <h4>No recipes found...</h4>;
+      recipeItems = null;
     }
   }
   return <div>{recipeItems}</div>;
