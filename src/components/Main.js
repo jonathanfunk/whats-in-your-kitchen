@@ -1,41 +1,36 @@
 import React, { useState, useContext } from 'react';
 import axios from 'axios';
 import RecipesList from './RecipesList';
-import PartialRecipesList from './PartialRecipesList';
 import { GlobalContext } from '../context/GlobalState';
 
 import mockData from './../mockData';
 
 const Main = () => {
   const [recipes, setRecipes] = useState([]);
-  const [partialRecipes, setPartialRecipes] = useState([]);
   const [loading, setLoading] = useState(false);
   const { ingredients } = useContext(GlobalContext);
 
-  // const mergedIngredients = ingredients.map(ingredient => {
-  //   return encodeURIComponent(ingredient.value);
-  // });
+  const mergedIngredients = ingredients.map(ingredient => {
+    return encodeURIComponent(ingredient.value);
+  });
 
-  //const encodedIngredients = mergedIngredients.join();
+  const encodedIngredients = mergedIngredients.join();
 
   const fetchRecipes = async e => {
     e.preventDefault();
     setLoading(true);
     try {
       // const recipes = await axios.get(
-      //   `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${encodedIngredients}&number=30&ranking=1&ignorePantry=true&apiKey=${process.env.REACT_APP_API_KEY}`
+      //   `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${encodedIngredients}&number=100&ranking=2&ignorePantry=true&apiKey=${process.env.REACT_APP_API_KEY}`
       // );
 
       const completeRecipeArray = mockData.filter(recipe => {
-        return recipe.missedIngredientCount === 0;
+        return recipe.missedIngredientCount < 2;
       });
 
-      const partialRecipesArray = mockData.filter(recipe => {
-        return recipe.missedIngredientCount === 1;
-      });
+      console.log(recipes);
 
       setRecipes(completeRecipeArray);
-      setPartialRecipes(partialRecipesArray);
       setLoading(false);
     } catch (err) {
       console.log(err);
@@ -56,7 +51,6 @@ const Main = () => {
           </button>
         </div>
         <RecipesList recipes={recipes} loading={loading} />
-        <PartialRecipesList partialRecipes={partialRecipes} />
       </div>
     </section>
   );
