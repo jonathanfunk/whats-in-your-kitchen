@@ -20,7 +20,7 @@ const RecipeContent = ({ recipeData }) => {
       </div>
       <div className="p-6 border-b border-orange-200">
         <h2 className="text-3xl font-semibold">{title}</h2>
-        <p className=" text-sm text-gray-600">
+        <p className="text-sm text-gray-600">
           From{' '}
           <a href={sourceUrl} target="_blank" rel="noopener noreferrer">
             {creditsText}

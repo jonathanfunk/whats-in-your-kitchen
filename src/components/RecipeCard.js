@@ -3,6 +3,7 @@ import axios from 'axios';
 import MissingIngredient from './MissingIngredient';
 import RecipeContent from './RecipeContent';
 import RecipeContentPlaceholder from './RecipeContentPlaceholder';
+import Error from './Error';
 import Popup from 'reactjs-popup';
 import singleMockData from './../singleMockData';
 
@@ -10,22 +11,33 @@ const RecipeCard = ({ id, title, image, missingIngredient = null }) => {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [recipe, setRecipe] = useState({});
+  const [error, setError] = useState(false);
 
   const openPopup = async () => {
+    setError(false);
     setLoading(true);
     setOpen(true);
     try {
       const recipeData = await axios.get(
-        `https://api.spoonacular.com/recipes/${id}/information?includeNutrition=false&apiKey=${process.env.REACT_APP_API_KEY}`
+        `https://api.spoonacular.com/recipes/${idgit s}/information?includeNutrition=false&apiKey=${process.env.REACT_APP_API_KEY}`
       );
-
       setRecipe(recipeData.data);
       setLoading(false);
     } catch (err) {
       console.log(err);
+      setError(true);
       setLoading(false);
     }
   };
+
+  let recipeCardContent;
+  if (recipe === null || loading) {
+    recipeCardContent = <RecipeContentPlaceholder />;
+  } else if (error) {
+    recipeCardContent = <Error />;
+  } else if (!recipe === null) {
+    recipeCardContent = <RecipeContent recipeData={recipe} />;
+  }
 
   return (
     <Fragment>
@@ -43,7 +55,7 @@ const RecipeCard = ({ id, title, image, missingIngredient = null }) => {
             {title}
           </h3>
           <div className="text-sm text-center text-gray-100 h-5">
-            {missingIngredient ? (
+            {recipe.missedIngredientCount === 1 ? (
               <MissingIngredient missingIngredient={missingIngredient.name} />
             ) : null}
           </div>
@@ -58,11 +70,7 @@ const RecipeCard = ({ id, title, image, missingIngredient = null }) => {
             ✕
           </button>
         </div>
-        {loading ? (
-          <RecipeContentPlaceholder />
-        ) : (
-          <RecipeContent recipeData={recipe} />
-        )}
+        {recipeCardContent}
       </Popup>
     </Fragment>
   );

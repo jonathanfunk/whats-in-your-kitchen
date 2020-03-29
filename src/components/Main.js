@@ -28,8 +28,6 @@ const Main = () => {
         return recipe.missedIngredientCount < 2;
       });
 
-      console.log(recipes);
-
       setRecipes(completeRecipeArray);
       setLoading(false);
     } catch (err) {
