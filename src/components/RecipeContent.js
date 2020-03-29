@@ -46,11 +46,11 @@ const RecipeContent = ({ recipeData }) => {
             <ul>
               {analyzedInstructions[0].steps.map(step => {
                 return (
-                  <li className="text-sm mb-3">
-                    <span className="w-10 h-10 leading-10 bg-orange-600 text-white inline-block text-center rounded-full mr-2">
+                  <li className="text-sm mb-3 flex items-baseline">
+                    <span className="w-10 h-10 leading-10 bg-orange-600 text-white inline-block text-center rounded-full mr-2 flex-shrink-0">
                       {step.number}
                     </span>{' '}
-                    {step.step}
+                    <span>{step.step}</span>
                   </li>
                 );
               })}

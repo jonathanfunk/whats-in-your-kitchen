@@ -18,10 +18,10 @@ const RecipeCard = ({ id, title, image, missingIngredient = null }) => {
     setLoading(true);
     setOpen(true);
     try {
-      const recipeData = await axios.get(
-        `https://api.spoonacular.com/recipes/${id}/information?includeNutrition=false&apiKey=${process.env.REACT_APP_API_KEY}`
-      );
-      setRecipe(recipeData.data);
+      // const recipeData = await axios.get(
+      //   `https://api.spoonacular.com/recipes/${id}/information?includeNutrition=false&apiKey=${process.env.REACT_APP_API_KEY}`
+      // );
+      setRecipe(singleMockData);
       setLoading(false);
     } catch (err) {
       console.log(err);
@@ -29,6 +29,8 @@ const RecipeCard = ({ id, title, image, missingIngredient = null }) => {
       setLoading(false);
     }
   };
+
+  console.log('Missing Ingredient', missingIngredient);
 
   let recipeCardContent;
   if (recipe === null || loading) {
@@ -55,7 +57,7 @@ const RecipeCard = ({ id, title, image, missingIngredient = null }) => {
             {title}
           </h3>
           <div className="text-sm text-center text-gray-100 h-5">
-            {recipe.missedIngredientCount === 1 ? (
+            {missingIngredient ? (
               <MissingIngredient missingIngredient={missingIngredient.name} />
             ) : null}
           </div>
