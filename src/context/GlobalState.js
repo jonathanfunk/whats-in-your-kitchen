@@ -1,9 +1,9 @@
-import React, { createContext, useReducer } from 'react';
+import React, { createContext, useReducer, useEffect } from 'react';
 import AppReducer from './AppReducer';
 
 // Initial state
 const initialState = {
-  ingredients: [],
+  ingredients: JSON.parse(localStorage.getItem('ingredients')) || [],
   recipes: null,
   loading: false
 };
@@ -15,6 +15,12 @@ export const GlobalContext = createContext(initialState);
 export const GlobalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
+  useEffect(() => {
+    localStorage.setItem('ingredients', JSON.stringify(state.ingredients));
+  }, [state.ingredients]);
+
+  console.log('State is...', state);
+
   // Actions
   function deleteIngredient(id) {
     dispatch({
@@ -23,10 +29,10 @@ export const GlobalProvider = ({ children }) => {
     });
   }
 
-  function addIngredient(Ingredient) {
+  function addIngredient(ingredient) {
     dispatch({
       type: 'ADD_INGREDIENT',
-      payload: Ingredient
+      payload: ingredient
     });
   }
 

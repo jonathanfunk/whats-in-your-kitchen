@@ -19,7 +19,7 @@ const RecipeCard = ({ id, title, image, missingIngredient = null }) => {
     setOpen(true);
     try {
       const recipeData = await axios.get(
-        `https://api.spoonacular.com/recipes/${idgit s}/information?includeNutrition=false&apiKey=${process.env.REACT_APP_API_KEY}`
+        `https://api.spoonacular.com/recipes/${id}/information?includeNutrition=false&apiKey=${process.env.REACT_APP_API_KEY}`
       );
       setRecipe(recipeData.data);
       setLoading(false);
@@ -35,7 +35,7 @@ const RecipeCard = ({ id, title, image, missingIngredient = null }) => {
     recipeCardContent = <RecipeContentPlaceholder />;
   } else if (error) {
     recipeCardContent = <Error />;
-  } else if (!recipe === null) {
+  } else {
     recipeCardContent = <RecipeContent recipeData={recipe} />;
   }
 
