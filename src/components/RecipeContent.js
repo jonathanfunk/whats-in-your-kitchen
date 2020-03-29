@@ -32,7 +32,7 @@ const RecipeContent = ({ recipeData }) => {
         <ul>
           {extendedIngredients.map(ingredient => {
             return (
-              <li className=" text-sm text-gray-600 p-3 bg-gray-100 odd:bg-gray-200">
+              <li className="text-sm text-gray-600 p-3 bg-gray-100 odd:bg-gray-200">
                 {ingredient.original}
               </li>
             );
@@ -40,19 +40,32 @@ const RecipeContent = ({ recipeData }) => {
         </ul>
       </div>
       <div className="p-6">
-        <h3 className="text-xl mb-2">Instructions</h3>
-        <ul>
-          {analyzedInstructions[0].steps.map(step => {
-            return (
-              <li className="text-sm mb-3">
-                <span className="w-10 h-10 leading-10 bg-orange-600 text-white inline-block text-center rounded-full mr-2">
-                  {step.number}
-                </span>{' '}
-                {step.step}
-              </li>
-            );
-          })}
-        </ul>
+        {analyzedInstructions.length > 0 ? (
+          <Fragment>
+            <h3 className="text-xl mb-2">Instructions</h3>
+            <ul>
+              {analyzedInstructions[0].steps.map(step => {
+                return (
+                  <li className="text-sm mb-3">
+                    <span className="w-10 h-10 leading-10 bg-orange-600 text-white inline-block text-center rounded-full mr-2">
+                      {step.number}
+                    </span>{' '}
+                    {step.step}
+                  </li>
+                );
+              })}
+            </ul>
+          </Fragment>
+        ) : (
+          <a
+            href={sourceUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-3 py-2 rounded-md bg-orange-500 text-white hover:bg-orange-400"
+          >
+            Click for instructions
+          </a>
+        )}
       </div>
     </Fragment>
   );

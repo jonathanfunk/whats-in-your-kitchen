@@ -95,7 +95,7 @@ a:hover {
 }
 
 .popup-content {
-  @apply border-0 w-full max-w-3xl p-0 rounded-md overflow-hidden !important;
+  @apply border-0 w-full max-w-3xl p-0 overflow-hidden relative !important;
 }
 
 @tailwind utilities;
