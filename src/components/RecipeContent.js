@@ -1,0 +1,61 @@
+import React, { Fragment } from 'react';
+
+const RecipeContent = ({ recipeData }) => {
+  const {
+    image,
+    title,
+    extendedIngredients,
+    analyzedInstructions,
+    sourceUrl,
+    creditsText
+  } = recipeData;
+  return (
+    <Fragment>
+      <div className="pb-1/2 relative bg-gray-100">
+        <img
+          className="absolute top-0 left-0 w-full h-full object-cover"
+          src={image}
+          alt={title}
+        />
+      </div>
+      <div className="p-6 border-b border-orange-200">
+        <h2 className="text-3xl font-semibold">{title}</h2>
+        <p className=" text-sm text-gray-600">
+          From{' '}
+          <a href={sourceUrl} target="_blank" rel="noopener noreferrer">
+            {creditsText}
+          </a>
+        </p>
+      </div>
+      <div className="p-6">
+        <h3 className="text-xl mb-2">Ingredients</h3>
+        <ul>
+          {extendedIngredients.map(ingredient => {
+            return (
+              <li className=" text-sm text-gray-600 p-3 bg-gray-100 odd:bg-gray-200">
+                {ingredient.original}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+      <div className="p-6">
+        <h3 className="text-xl mb-2">Instructions</h3>
+        <ul>
+          {analyzedInstructions[0].steps.map(step => {
+            return (
+              <li className="text-sm mb-3">
+                <span className="w-10 h-10 leading-10 bg-orange-600 text-white inline-block text-center rounded-full mr-2">
+                  {step.number}
+                </span>{' '}
+                {step.step}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    </Fragment>
+  );
+};
+
+export default RecipeContent;

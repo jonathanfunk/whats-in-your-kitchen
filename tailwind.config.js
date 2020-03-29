@@ -48,7 +48,8 @@ module.exports = {
   },
   variants: {
     opacity: ['disabled'],
-    cursor: ['responsive', 'disabled']
+    cursor: ['responsive', 'disabled'],
+    backgroundColor: ['odd', 'hover', 'focus']
   },
   plugins: []
 };

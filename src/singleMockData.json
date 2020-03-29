@@ -1,0 +1,414 @@
+{
+  "vegetarian": true,
+  "vegan": false,
+  "glutenFree": false,
+  "dairyFree": true,
+  "veryHealthy": false,
+  "cheap": false,
+  "veryPopular": false,
+  "sustainable": false,
+  "weightWatcherSmartPoints": 8,
+  "gaps": "no",
+  "lowFodmap": false,
+  "preparationMinutes": 10,
+  "cookingMinutes": 20,
+  "sourceUrl": "https://www.the-girl-who-ate-everything.com/apple-muffins/",
+  "spoonacularSourceUrl": "https://spoonacular.com/apple-muffins-1130777",
+  "aggregateLikes": 2,
+  "spoonacularScore": 13.0,
+  "healthScore": 1.0,
+  "creditsText": "The girl Who Ate Everything",
+  "sourceName": "The girl Who Ate Everything",
+  "pricePerServing": 24.76,
+  "extendedIngredients": [
+    {
+      "id": 19335,
+      "aisle": "Baking",
+      "image": "sugar-in-bowl.png",
+      "consistency": "solid",
+      "name": "sugar",
+      "original": "2 cups sugar (or use 1 1/2 cups for a less sweet muffin)",
+      "originalString": "2 cups sugar (or use 1 1/2 cups for a less sweet muffin)",
+      "originalName": "sugar (or use 1 1/2 cups for a less sweet muffin)",
+      "amount": 2.0,
+      "unit": "cups",
+      "meta": ["sweet", "for a less  muffin"],
+      "metaInformation": ["sweet", "for a less  muffin"],
+      "measures": {
+        "us": {
+          "amount": 2.0,
+          "unitShort": "cups",
+          "unitLong": "cups"
+        },
+        "metric": {
+          "amount": 473.176,
+          "unitShort": "ml",
+          "unitLong": "milliliters"
+        }
+      }
+    },
+    {
+      "id": 1123,
+      "aisle": "Milk, Eggs, Other Dairy",
+      "image": "egg.png",
+      "consistency": "solid",
+      "name": "eggs",
+      "original": "2 eggs",
+      "originalString": "2 eggs",
+      "originalName": "eggs",
+      "amount": 2.0,
+      "unit": "",
+      "meta": [],
+      "metaInformation": [],
+      "measures": {
+        "us": {
+          "amount": 2.0,
+          "unitShort": "",
+          "unitLong": ""
+        },
+        "metric": {
+          "amount": 2.0,
+          "unitShort": "",
+          "unitLong": ""
+        }
+      }
+    },
+    {
+      "id": 4582,
+      "aisle": "Oil, Vinegar, Salad Dressing",
+      "image": "vegetable-oil.jpg",
+      "consistency": "liquid",
+      "name": "oil",
+      "original": "1 cup oil",
+      "originalString": "1 cup oil",
+      "originalName": "oil",
+      "amount": 1.0,
+      "unit": "cup",
+      "meta": [],
+      "metaInformation": [],
+      "measures": {
+        "us": {
+          "amount": 1.0,
+          "unitShort": "cup",
+          "unitLong": "cup"
+        },
+        "metric": {
+          "amount": 236.588,
+          "unitShort": "ml",
+          "unitLong": "milliliters"
+        }
+      }
+    },
+    {
+      "id": 2050,
+      "aisle": "Baking",
+      "image": "vanilla.jpg",
+      "consistency": "solid",
+      "name": "vanilla",
+      "original": "1 Tablespoon vanilla",
+      "originalString": "1 Tablespoon vanilla",
+      "originalName": "vanilla",
+      "amount": 1.0,
+      "unit": "Tablespoon",
+      "meta": [],
+      "metaInformation": [],
+      "measures": {
+        "us": {
+          "amount": 1.0,
+          "unitShort": "Tbsp",
+          "unitLong": "Tbsp"
+        },
+        "metric": {
+          "amount": 1.0,
+          "unitShort": "Tbsp",
+          "unitLong": "Tbsp"
+        }
+      }
+    },
+    {
+      "id": 20081,
+      "aisle": "Baking",
+      "image": "flour.png",
+      "consistency": "solid",
+      "name": "flour",
+      "original": "3 cups flour",
+      "originalString": "3 cups flour",
+      "originalName": "flour",
+      "amount": 3.0,
+      "unit": "cups",
+      "meta": [],
+      "metaInformation": [],
+      "measures": {
+        "us": {
+          "amount": 3.0,
+          "unitShort": "cups",
+          "unitLong": "cups"
+        },
+        "metric": {
+          "amount": 709.764,
+          "unitShort": "ml",
+          "unitLong": "milliliters"
+        }
+      }
+    },
+    {
+      "id": 2047,
+      "aisle": "Spices and Seasonings",
+      "image": "salt.jpg",
+      "consistency": "solid",
+      "name": "salt",
+      "original": "1 teaspoon salt",
+      "originalString": "1 teaspoon salt",
+      "originalName": "salt",
+      "amount": 1.0,
+      "unit": "teaspoon",
+      "meta": [],
+      "metaInformation": [],
+      "measures": {
+        "us": {
+          "amount": 1.0,
+          "unitShort": "tsp",
+          "unitLong": "teaspoon"
+        },
+        "metric": {
+          "amount": 1.0,
+          "unitShort": "tsp",
+          "unitLong": "teaspoon"
+        }
+      }
+    },
+    {
+      "id": 18372,
+      "aisle": "Baking",
+      "image": "white-powder.jpg",
+      "consistency": "solid",
+      "name": "baking soda",
+      "original": "1 teaspoon baking soda",
+      "originalString": "1 teaspoon baking soda",
+      "originalName": "baking soda",
+      "amount": 1.0,
+      "unit": "teaspoon",
+      "meta": [],
+      "metaInformation": [],
+      "measures": {
+        "us": {
+          "amount": 1.0,
+          "unitShort": "tsp",
+          "unitLong": "teaspoon"
+        },
+        "metric": {
+          "amount": 1.0,
+          "unitShort": "tsp",
+          "unitLong": "teaspoon"
+        }
+      }
+    },
+    {
+      "id": 2010,
+      "aisle": "Spices and Seasonings",
+      "image": "cinnamon.jpg",
+      "consistency": "solid",
+      "name": "cinnamon",
+      "original": "1 teaspoon cinnamon",
+      "originalString": "1 teaspoon cinnamon",
+      "originalName": "cinnamon",
+      "amount": 1.0,
+      "unit": "teaspoon",
+      "meta": [],
+      "metaInformation": [],
+      "measures": {
+        "us": {
+          "amount": 1.0,
+          "unitShort": "tsp",
+          "unitLong": "teaspoon"
+        },
+        "metric": {
+          "amount": 1.0,
+          "unitShort": "tsp",
+          "unitLong": "teaspoon"
+        }
+      }
+    },
+    {
+      "id": 9003,
+      "aisle": "Produce",
+      "image": "apple.jpg",
+      "consistency": "solid",
+      "name": "apples",
+      "original": "3 cups peeled, cored, diced apples (around 3 apples)",
+      "originalString": "3 cups peeled, cored, diced apples (around 3 apples)",
+      "originalName": "peeled, cored, diced apples (around 3 apples)",
+      "amount": 3.0,
+      "unit": "cups",
+      "meta": ["diced", "cored", "peeled", "(around 3 apples)"],
+      "metaInformation": ["diced", "cored", "peeled", "(around 3 apples)"],
+      "measures": {
+        "us": {
+          "amount": 3.0,
+          "unitShort": "cups",
+          "unitLong": "cups"
+        },
+        "metric": {
+          "amount": 709.764,
+          "unitShort": "ml",
+          "unitLong": "milliliters"
+        }
+      }
+    },
+    {
+      "id": 19334,
+      "aisle": "Baking",
+      "image": "light-brown-sugar.jpg",
+      "consistency": "solid",
+      "name": "brown sugar",
+      "original": "Brown sugar for topping (around 1/2 cup)",
+      "originalString": "Brown sugar for topping (around 1/2 cup)",
+      "originalName": "Brown sugar for topping (around 1/2 cup)",
+      "amount": 1.0,
+      "unit": "serving",
+      "meta": ["for topping (around 1/2 cup"],
+      "metaInformation": ["for topping (around 1/2 cup"],
+      "measures": {
+        "us": {
+          "amount": 1.0,
+          "unitShort": "serving",
+          "unitLong": "serving"
+        },
+        "metric": {
+          "amount": 1.0,
+          "unitShort": "serving",
+          "unitLong": "serving"
+        }
+      }
+    }
+  ],
+  "id": 1130777,
+  "title": "Apple Muffins",
+  "readyInMinutes": 30,
+  "servings": 18,
+  "image": "https://spoonacular.com/recipeImages/1130777-556x370.jpg",
+  "imageType": "jpg",
+  "summary": "If you want to add more <b>dairy free and lacto ovo vegetarian</b> recipes to your repertoire, Apple Muffins might be a recipe you should try. This breakfast has <b>194 calories</b>, <b>3g of protein</b>, and <b>2g of fat</b> per serving. This recipe serves 18 and costs 25 cents per serving. 1 person found this recipe to be delicious and satisfying. Head to the store and pick up flour, brown sugar ), baking soda, and a few other things to make it today. From preparation to the plate, this recipe takes around <b>30 minutes</b>. It is brought to you by The girl Who Ate Everything. With a spoonacular <b>score of 0%</b>, this dish is very bad (but still fixable). Users who liked this recipe also liked <a href=\"https://spoonacular.com/recipes/spiced-apple-muffins-with-apple-cinnamon-glaze-616320\">Spiced Apple Muffins with Apple Cinnamon Glaze</a>, <a href=\"https://spoonacular.com/recipes/spiced-apple-muffins-with-apple-cinnamon-glaze-615729\">Spiced Apple Muffins with Apple Cinnamon Glaze</a>, and <a href=\"https://spoonacular.com/recipes/buns-rolls-muffins-bread-machine-apple-breakfast-buns-muffins-530120\">Buns? Rolls? Muffins? Bread Machine Apple Breakfast Buns Muffins</a>.",
+  "cuisines": [],
+  "dishTypes": ["morning meal", "brunch", "breakfast"],
+  "diets": ["dairy free", "lacto ovo vegetarian"],
+  "occasions": [],
+  "winePairing": {
+    "pairedWines": [],
+    "pairingText": "",
+    "productMatches": []
+  },
+  "instructions": "Preheat oven to 350 degrees and line muffin pan with paper liners.\n\nCream together sugar, eggs, oil, and vanilla. Sift flour, baking soda, salt, and ground cinnamon\\. Add dry ingredients to creamed mixture and mix until combined. The batter will be very thick. Add the diced apples.\n\nFill paper liners almost to the top, about 3/4 of the way full. Sprinkle with brown sugar.\n\nBake at 350 degrees for 20-24 minutes.",
+  "analyzedInstructions": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "number": 1,
+          "step": "Preheat oven to 350 degrees and line muffin pan with paper liners.",
+          "ingredients": [],
+          "equipment": [
+            {
+              "id": 404671,
+              "name": "muffin tray",
+              "image": "muffin-tray.jpg"
+            },
+            {
+              "id": 404784,
+              "name": "oven",
+              "image": "oven.jpg"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "step": "Cream together sugar, eggs, oil, and vanilla. Sift flour, baking soda, salt, and ground cinnamon\\.",
+          "ingredients": [
+            {
+              "id": 1012010,
+              "name": "ground cinnamon",
+              "image": "cinnamon.jpg"
+            },
+            {
+              "id": 18372,
+              "name": "baking soda",
+              "image": "white-powder.jpg"
+            },
+            {
+              "id": 2050,
+              "name": "vanilla",
+              "image": "vanilla.jpg"
+            },
+            {
+              "id": 20081,
+              "name": "all purpose flour",
+              "image": "flour.png"
+            },
+            {
+              "id": 19335,
+              "name": "sugar",
+              "image": "sugar-in-bowl.png"
+            },
+            {
+              "id": 1123,
+              "name": "egg",
+              "image": "egg.png"
+            },
+            {
+              "id": 2047,
+              "name": "salt",
+              "image": "salt.jpg"
+            },
+            {
+              "id": 4582,
+              "name": "cooking oil",
+              "image": "vegetable-oil.jpg"
+            }
+          ],
+          "equipment": []
+        },
+        {
+          "number": 3,
+          "step": "Add dry ingredients to creamed mixture and mix until combined. The batter will be very thick.",
+          "ingredients": [],
+          "equipment": []
+        },
+        {
+          "number": 4,
+          "step": "Add the diced apples.",
+          "ingredients": [
+            {
+              "id": 9003,
+              "name": "apple",
+              "image": "apple.jpg"
+            }
+          ],
+          "equipment": []
+        },
+        {
+          "number": 5,
+          "step": "Fill paper liners almost to the top, about 3/4 of the way full. Sprinkle with brown sugar.",
+          "ingredients": [
+            {
+              "id": 19334,
+              "name": "brown sugar",
+              "image": "dark-brown-sugar.png"
+            }
+          ],
+          "equipment": []
+        },
+        {
+          "number": 6,
+          "step": "Bake at 350 degrees for 20-24 minutes.",
+          "ingredients": [],
+          "equipment": [],
+          "length": {
+            "number": 24,
+            "unit": "minutes"
+          }
+        }
+      ]
+    }
+  ],
+  "originalId": null
+}
