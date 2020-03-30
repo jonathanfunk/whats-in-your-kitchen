@@ -1,4 +1,5 @@
 {
+  "homepage": "http://jonathanfunk.github.io/whats-in-your-kitchen",
   "name": "whats-in-your-kitchen",
   "version": "0.1.0",
   "private": true,
@@ -43,6 +44,7 @@
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.1.0",
     "autoprefixer": "^9.7.4",
+    "gh-pages": "^2.2.0",
     "postcss-cli": "^7.1.0",
     "prop-types": "^15.7.2",
     "tailwindcss": "^1.2.0"
