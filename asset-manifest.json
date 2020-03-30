@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/whats-in-your-kitchen/static/css/main.9c0d7987.chunk.css",
-    "main.js": "/whats-in-your-kitchen/static/js/main.0c14fdfc.chunk.js",
-    "main.js.map": "/whats-in-your-kitchen/static/js/main.0c14fdfc.chunk.js.map",
+    "main.js": "/whats-in-your-kitchen/static/js/main.f5b112ef.chunk.js",
+    "main.js.map": "/whats-in-your-kitchen/static/js/main.f5b112ef.chunk.js.map",
     "runtime-main.js": "/whats-in-your-kitchen/static/js/runtime-main.b4259267.js",
     "runtime-main.js.map": "/whats-in-your-kitchen/static/js/runtime-main.b4259267.js.map",
     "static/js/2.fe3292f9.chunk.js": "/whats-in-your-kitchen/static/js/2.fe3292f9.chunk.js",
     "static/js/2.fe3292f9.chunk.js.map": "/whats-in-your-kitchen/static/js/2.fe3292f9.chunk.js.map",
     "index.html": "/whats-in-your-kitchen/index.html",
-    "precache-manifest.828f82683a1804e603172900a01dffb7.js": "/whats-in-your-kitchen/precache-manifest.828f82683a1804e603172900a01dffb7.js",
+    "precache-manifest.06e4e3abb0110fe507661b7fa1e76536.js": "/whats-in-your-kitchen/precache-manifest.06e4e3abb0110fe507661b7fa1e76536.js",
     "service-worker.js": "/whats-in-your-kitchen/service-worker.js",
     "static/css/main.9c0d7987.chunk.css.map": "/whats-in-your-kitchen/static/css/main.9c0d7987.chunk.css.map",
     "static/js/2.fe3292f9.chunk.js.LICENSE.txt": "/whats-in-your-kitchen/static/js/2.fe3292f9.chunk.js.LICENSE.txt",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.b4259267.js",
     "static/js/2.fe3292f9.chunk.js",
     "static/css/main.9c0d7987.chunk.css",
-    "static/js/main.0c14fdfc.chunk.js"
+    "static/js/main.f5b112ef.chunk.js"
   ]
 }

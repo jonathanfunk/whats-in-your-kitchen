@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/whats-in-your-kitchen/precache-manifest.828f82683a1804e603172900a01dffb7.js"
+  "/whats-in-your-kitchen/precache-manifest.06e4e3abb0110fe507661b7fa1e76536.js"
 );
 
 self.addEventListener('message', (event) => {
