@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/whats-in-your-kitchen/static/css/main.f26bca05.chunk.css",
+    "main.js": "/whats-in-your-kitchen/static/js/main.0c14fdfc.chunk.js",
+    "main.js.map": "/whats-in-your-kitchen/static/js/main.0c14fdfc.chunk.js.map",
+    "runtime-main.js": "/whats-in-your-kitchen/static/js/runtime-main.b4259267.js",
+    "runtime-main.js.map": "/whats-in-your-kitchen/static/js/runtime-main.b4259267.js.map",
+    "static/js/2.fe3292f9.chunk.js": "/whats-in-your-kitchen/static/js/2.fe3292f9.chunk.js",
+    "static/js/2.fe3292f9.chunk.js.map": "/whats-in-your-kitchen/static/js/2.fe3292f9.chunk.js.map",
+    "index.html": "/whats-in-your-kitchen/index.html",
+    "precache-manifest.6a853300f2f910a245c714c869a3ea5d.js": "/whats-in-your-kitchen/precache-manifest.6a853300f2f910a245c714c869a3ea5d.js",
+    "service-worker.js": "/whats-in-your-kitchen/service-worker.js",
+    "static/css/main.f26bca05.chunk.css.map": "/whats-in-your-kitchen/static/css/main.f26bca05.chunk.css.map",
+    "static/js/2.fe3292f9.chunk.js.LICENSE.txt": "/whats-in-your-kitchen/static/js/2.fe3292f9.chunk.js.LICENSE.txt",
+    "static/media/expand.svg": "/whats-in-your-kitchen/static/media/expand.08f88f57.svg",
+    "static/media/fridge.svg": "/whats-in-your-kitchen/static/media/fridge.38f88846.svg",
+    "static/media/styles.css": "/whats-in-your-kitchen/static/media/wiyk-bg.892168a6.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b4259267.js",
+    "static/js/2.fe3292f9.chunk.js",
+    "static/css/main.f26bca05.chunk.css",
+    "static/js/main.0c14fdfc.chunk.js"
+  ]
+}
