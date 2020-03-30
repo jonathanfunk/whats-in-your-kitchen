@@ -5,7 +5,6 @@ import RecipeContent from './RecipeContent';
 import RecipeContentPlaceholder from './RecipeContentPlaceholder';
 import Error from './Error';
 import Popup from 'reactjs-popup';
-import singleMockData from './../singleMockData';
 import expand from './../images/expand.svg';
 
 const RecipeCard = ({ id, title, image, missingIngredient = null }) => {
@@ -30,8 +29,6 @@ const RecipeCard = ({ id, title, image, missingIngredient = null }) => {
       setLoading(false);
     }
   };
-
-  console.log('Missing Ingredient', missingIngredient);
 
   let recipeCardContent;
   if (recipe === null || loading) {

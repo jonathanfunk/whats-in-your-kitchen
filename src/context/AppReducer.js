@@ -8,7 +8,6 @@ export default (state, action) => {
         )
       };
     case 'ADD_INGREDIENT':
-      console.log('Action payload is...', action.payload);
       return {
         ...state,
         ingredients: [...state.ingredients, action.payload]

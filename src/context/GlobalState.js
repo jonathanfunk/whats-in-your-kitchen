@@ -19,8 +19,6 @@ export const GlobalProvider = ({ children }) => {
     localStorage.setItem('ingredients', JSON.stringify(state.ingredients));
   }, [state.ingredients]);
 
-  console.log('State is...', state);
-
   // Actions
   function deleteIngredient(id) {
     dispatch({
