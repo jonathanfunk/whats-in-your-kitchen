@@ -7,7 +7,8 @@ module.exports = {
     extend: {
       minHeight: {
         '40vh': '40vh',
-        '60vh': '60vh'
+        '60vh': '60vh',
+        '20': '5rem'
       },
       maxHeight: {
         '100vh': '100vh'

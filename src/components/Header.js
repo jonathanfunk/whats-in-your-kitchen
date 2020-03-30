@@ -12,9 +12,12 @@ const Header = () => {
           src={fridgeIcon}
           alt="Fridge Icon"
         />
-        <h1 className="text-white text-4xl leading-none text-center font-semibold mb-8 lg:text-5xl">
+        <h1 className="text-white text-4xl leading-none text-center font-semibold mb-4 lg:text-5xl">
           What's in your kitchen?
         </h1>
+        <p className="text-xl text-center text-white mb-8">
+          Discover what you can make with what you got in your fridge or pantry
+        </p>
         <AddIngredient />
         <IngredientsList />
       </div>

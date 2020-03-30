@@ -2,7 +2,7 @@ import React, { useState, useContext, Fragment } from 'react';
 import { GlobalContext } from '../context/GlobalState';
 
 const MissingIngredient = ({ missingIngredient }) => {
-  const [checked, setChecked] = useState(false);
+  const [setChecked] = useState(false);
 
   const { addIngredient, ingredients } = useContext(GlobalContext);
 

@@ -19,10 +19,10 @@ const RecipeCard = ({ id, title, image, missingIngredient = null }) => {
     setLoading(true);
     setOpen(true);
     try {
-      // const recipeData = await axios.get(
-      //   `https://api.spoonacular.com/recipes/${id}/information?includeNutrition=false&apiKey=${process.env.REACT_APP_API_KEY}`
-      // );
-      setRecipe(singleMockData);
+      const recipeData = await axios.get(
+        `https://api.spoonacular.com/recipes/${id}/information?includeNutrition=false&apiKey=${process.env.REACT_APP_API_KEY}`
+      );
+      setRecipe(recipeData.data);
       setLoading(false);
     } catch (err) {
       console.log(err);
@@ -59,7 +59,7 @@ const RecipeCard = ({ id, title, image, missingIngredient = null }) => {
           alt={title}
         />
         <div className="absolute top-0 left-0 w-full h-full z-10 p-4 flex flex-col justify-end">
-          <h3 className="relative text-white text-xl font-medium text-center mb-2 hover:text-gray-200 cursor-pointer">
+          <h3 className="relative text-white text-xl font-medium text-center mb-2">
             {title}
           </h3>
           <div className="text-sm text-center text-gray-100 h-5">
