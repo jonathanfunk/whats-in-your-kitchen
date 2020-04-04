@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "666e908b9a44f565f7aa1425030cbcc5",
+    "revision": "886f66a313d17dbb1ee5b526a114030a",
     "url": "/whats-in-your-kitchen/index.html"
   },
   {
-    "revision": "fdaa0e49f8e5f50919ac",
+    "revision": "4d1d3dd9792a148189df",
     "url": "/whats-in-your-kitchen/static/css/main.9c0d7987.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/whats-in-your-kitchen/static/js/2.fe3292f9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "fdaa0e49f8e5f50919ac",
-    "url": "/whats-in-your-kitchen/static/js/main.a6bb8b3e.chunk.js"
+    "revision": "4d1d3dd9792a148189df",
+    "url": "/whats-in-your-kitchen/static/js/main.b4589176.chunk.js"
   },
   {
     "revision": "9df149fb8326ca864f2a",
