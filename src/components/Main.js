@@ -8,20 +8,22 @@ import mockData from './../mockData';
 
 const Main = () => {
   const [message, setMessage] = useState(
-    'Add ingredients then click "Fetch Recipes".'
+    'Add ingredients then click "Fetch Recipes". Try to add as many ingredients as you can for better results.'
   );
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
   const { ingredients } = useContext(GlobalContext);
 
-  const mergedIngredients = ingredients.map(ingredient => {
+  const mergedIngredients = ingredients.map((ingredient) => {
     return encodeURIComponent(ingredient.value);
   });
 
   const encodedIngredients = mergedIngredients.join();
 
-  const fetchRecipes = async e => {
+  const fetchRecipes = async (e) => {
     e.preventDefault();
+    setError(false);
     setMessage('');
     setLoading(true);
     try {
@@ -29,7 +31,7 @@ const Main = () => {
         `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${encodedIngredients}&number=100&ranking=2&ignorePantry=false&apiKey=${process.env.REACT_APP_API_KEY}`
       );
 
-      const completeRecipeArray = recipes.data.filter(recipe => {
+      const completeRecipeArray = recipes.data.filter((recipe) => {
         return recipe.missedIngredientCount < 2;
       });
 
@@ -43,7 +45,10 @@ const Main = () => {
       setRecipes(completeRecipeArray);
       setLoading(false);
     } catch (err) {
-      console.log(err);
+      setError(true);
+      setMessage(
+        "Darn! It appears we've hit our limit for requests for the day. Please try again tomorrow."
+      );
       setLoading(false);
     }
   };

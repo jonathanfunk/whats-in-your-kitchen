@@ -10,9 +10,7 @@ a:hover {
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @tailwind components;
 
-/*--------------------------------------------------------------
-# Header Styles
---------------------------------------------------------------*/
+/* Header Styles */
 
 .header {
   background: url('./images/wiyk-bg.jpg');
@@ -31,9 +29,7 @@ a:hover {
   }
 }
 
-/*--------------------------------------------------------------
-# Input Form Styles
---------------------------------------------------------------*/
+/* Input Form Styles */
 
 .react-autosuggest__container {
   @apply relative;
@@ -66,9 +62,7 @@ a:hover {
   @apply bg-orange-200;
 }
 
-/*--------------------------------------------------------------
-# Recipe Grid Styles
---------------------------------------------------------------*/
+/* Recipe Grid Styles */
 
 .recipe-grid {
   @apply grid gap-4 grid-cols-1;
@@ -86,9 +80,7 @@ a:hover {
   }
 }
 
-/*--------------------------------------------------------------
-# Recipe Popup Styles
---------------------------------------------------------------*/
+/* Recipe Popup Styles */
 
 .popup-overlay {
   @apply overflow-y-auto;

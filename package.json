@@ -16,6 +16,8 @@
     "reactjs-popup": "^1.5.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "build:tw": "postcss ./src/tailwind.css -o ./src/styles.css --env production",

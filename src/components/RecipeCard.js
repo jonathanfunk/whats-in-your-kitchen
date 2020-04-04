@@ -24,7 +24,6 @@ const RecipeCard = ({ id, title, image, missingIngredient = null }) => {
       setRecipe(recipeData.data);
       setLoading(false);
     } catch (err) {
-      console.log(err);
       setError(true);
       setLoading(false);
     }
