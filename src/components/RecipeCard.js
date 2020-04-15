@@ -1,4 +1,5 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState, useContext } from 'react';
+import { GlobalContext } from '../context/GlobalState';
 import axios from 'axios';
 import MissingIngredient from './MissingIngredient';
 import RecipeContent from './RecipeContent';
@@ -7,7 +8,9 @@ import Error from './Error';
 import Popup from 'reactjs-popup';
 import expand from './../images/expand.svg';
 
-const RecipeCard = ({ id, title, image, missingIngredient = null }) => {
+const RecipeCard = ({ id, title, image, missingIngredients = null }) => {
+  const { ingredients } = useContext(GlobalContext);
+
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [recipe, setRecipe] = useState({});
@@ -29,13 +32,23 @@ const RecipeCard = ({ id, title, image, missingIngredient = null }) => {
     }
   };
 
+  const ingredientAdded = missingIngredients.filter((missingIngredient) => {
+    return (
+      ingredients.filter((ingredient) => {
+        return ingredient.value === missingIngredient.name;
+      }).length === 0
+    );
+  });
+
   let recipeCardContent;
   if (recipe === null || loading) {
     recipeCardContent = <RecipeContentPlaceholder />;
   } else if (error) {
     recipeCardContent = <Error />;
   } else {
-    recipeCardContent = <RecipeContent recipeData={recipe} />;
+    recipeCardContent = (
+      <RecipeContent recipeData={recipe} missingIngredients={ingredientAdded} />
+    );
   }
 
   return (
@@ -59,8 +72,8 @@ const RecipeCard = ({ id, title, image, missingIngredient = null }) => {
             {title}
           </h3>
           <div className="text-sm text-center text-gray-100 h-5">
-            {missingIngredient ? (
-              <MissingIngredient missingIngredient={missingIngredient.name} />
+            {ingredientAdded.length ? (
+              <p>Missing {ingredientAdded.length} ingredients</p>
             ) : null}
           </div>
         </div>

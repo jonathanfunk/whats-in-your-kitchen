@@ -28,21 +28,18 @@ const Main = () => {
     setLoading(true);
     try {
       const recipes = await axios.get(
-        `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${encodedIngredients}&number=100&ranking=2&ignorePantry=false&apiKey=${process.env.REACT_APP_API_KEY}`
+        `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${encodedIngredients}&number=30&ranking=2&ignorePantry=false&apiKey=${process.env.REACT_APP_API_KEY}`
       );
+      console.log(recipes.data);
 
-      const completeRecipeArray = recipes.data.filter((recipe) => {
-        return recipe.missedIngredientCount < 2;
-      });
-
-      if (completeRecipeArray.length === 0) {
+      if (recipes.data.length === 0) {
         setMessage(
           "Darn! Can't find any recipes. Try adding more ingredients."
         );
       } else {
         setMessage('');
       }
-      setRecipes(completeRecipeArray);
+      setRecipes(recipes.data);
       setLoading(false);
     } catch (err) {
       setError(true);

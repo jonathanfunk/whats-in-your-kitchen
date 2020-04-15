@@ -1,43 +1,37 @@
 import React, { useState, useContext, Fragment } from 'react';
 import { GlobalContext } from '../context/GlobalState';
 
-const MissingIngredient = ({ missingIngredient }) => {
+const MissingIngredient = ({ ingredient }) => {
   const [checked, setChecked] = useState(false);
 
   const { addIngredient, ingredients } = useContext(GlobalContext);
 
-  const addMissingIngredient = missingIngredient => {
+  const addMissingIngredient = (ingredient) => {
     const newIngredient = {
       id: Math.floor(Math.random() * 100000000),
-      value: missingIngredient
+      value: ingredient,
     };
     addIngredient(newIngredient);
     setChecked(true);
   };
 
-  const ingredientAdded = ingredients.filter(ingredient => {
-    return missingIngredient === ingredient.value;
+  const ingredientAdded = ingredients.filter((newIngredient) => {
+    return ingredient === newIngredient.value;
   });
 
-  let missingIngredientItems;
-  if (ingredientAdded.length === 0) {
-    missingIngredientItems = (
-      <Fragment>
-        Missing:
+  return (
+    <Fragment>
+      {!ingredientAdded.length ? (
         <div
-          className="bg-orange-100 px-2 inline-block rounded-full mx-1 mb-2 cursor-pointer text-black hover:bg-orange-200"
-          onClick={() => addMissingIngredient(missingIngredient)}
+          className="bg-orange-500 px-2 inline-block rounded-full mx-1 mb-2 cursor-pointer text-white hover:bg-orange-400"
+          onClick={() => addMissingIngredient(ingredient)}
         >
-          {missingIngredient}
+          {ingredient}
           <span className="px-1 text-green-600">+</span>
         </div>
-      </Fragment>
-    );
-  } else {
-    missingIngredientItems = null;
-  }
-
-  return <Fragment>{missingIngredientItems}</Fragment>;
+      ) : null}
+    </Fragment>
+  );
 };
 
 export default MissingIngredient;

@@ -13,13 +13,13 @@ const RecipesList = ({ recipes, loading }) => {
   } else if (recipes.length > 0) {
     recipeItems = (
       <div className="recipe-grid mb-10">
-        {recipes.map(recipe => (
+        {recipes.map((recipe) => (
           <RecipeCard
             key={recipe.id}
             id={recipe.id}
             title={recipe.title}
             image={recipe.image}
-            missingIngredient={recipe.missedIngredients[0]}
+            missingIngredients={recipe.missedIngredients}
           />
         ))}
       </div>

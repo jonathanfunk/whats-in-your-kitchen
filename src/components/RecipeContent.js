@@ -1,13 +1,14 @@
 import React, { Fragment } from 'react';
+import MissingIngredientsList from './MissingingredientsList';
 
-const RecipeContent = ({ recipeData }) => {
+const RecipeContent = ({ recipeData, missingIngredients }) => {
   const {
     image,
     title,
     extendedIngredients,
     analyzedInstructions,
     sourceUrl,
-    creditsText
+    creditsText,
   } = recipeData;
   return (
     <Fragment>
@@ -20,17 +21,23 @@ const RecipeContent = ({ recipeData }) => {
       </div>
       <div className="p-6 border-b border-orange-200">
         <h2 className="text-3xl font-semibold">{title}</h2>
-        <p className="text-sm text-gray-600">
+        <p className="text-sm text-gray-600 mb-4">
           From{' '}
           <a href={sourceUrl} target="_blank" rel="noopener noreferrer">
             {creditsText}
           </a>
         </p>
+        {missingIngredients.length ? (
+          <p className="text-sm text-gray-600">
+            Missing ingredients:{' '}
+            <MissingIngredientsList missingIngredients={missingIngredients} />
+          </p>
+        ) : null}
       </div>
       <div className="p-6">
         <h3 className="text-xl mb-2">Ingredients</h3>
         <ul>
-          {extendedIngredients.map(ingredient => {
+          {extendedIngredients.map((ingredient) => {
             return (
               <li className="text-sm text-gray-600 p-3 bg-gray-100 odd:bg-gray-200">
                 {ingredient.original}
@@ -44,7 +51,7 @@ const RecipeContent = ({ recipeData }) => {
           <Fragment>
             <h3 className="text-xl mb-2">Instructions</h3>
             <ul>
-              {analyzedInstructions[0].steps.map(step => {
+              {analyzedInstructions[0].steps.map((step) => {
                 return (
                   <li className="text-sm mb-3 flex items-baseline">
                     <span className="w-10 h-10 leading-10 bg-orange-600 text-white inline-block text-center rounded-full mr-2 flex-shrink-0">
