@@ -1,12 +1,12 @@
 import React, { Fragment, useState, useContext } from 'react';
 import { GlobalContext } from '../context/GlobalState';
 import axios from 'axios';
-import MissingIngredient from './MissingIngredient';
 import RecipeContent from './RecipeContent';
 import RecipeContentPlaceholder from './RecipeContentPlaceholder';
 import Error from './Error';
 import Popup from 'reactjs-popup';
 import expand from './../images/expand.svg';
+import heart from './../images/heart.svg';
 
 const RecipeCard = ({ id, title, image, missingIngredients = null }) => {
   const { ingredients } = useContext(GlobalContext);
@@ -54,6 +54,14 @@ const RecipeCard = ({ id, title, image, missingIngredients = null }) => {
   return (
     <Fragment>
       <div className="pb-2/3 relative bg-gray-900 rounded overflow-hidden">
+      <div className="absolute z-20 w-16 h-16 flex justify-center items-center left-0">
+      <div
+        className="w-10 h-10 bg-orange-500 rounded-full leading-10 text-white hover:bg-orange-400 focus:outline-none flex items-center justify-center cursor-pointer"
+        onClick={openPopup}
+      >
+        <img className="h-6 w-6" src={heart} alt="Heart Icon" />
+      </div>
+    </div>
         <div className="absolute z-20 w-16 h-16 flex justify-center items-center right-0">
           <div
             className="w-10 h-10 bg-orange-500 rounded-full leading-10 text-white hover:bg-orange-400 focus:outline-none flex items-center justify-center cursor-pointer"
@@ -73,7 +81,10 @@ const RecipeCard = ({ id, title, image, missingIngredients = null }) => {
           </h3>
           <div className="text-sm text-center text-gray-100 h-5">
             {ingredientAdded.length ? (
-              <p>Missing {ingredientAdded.length} ingredients</p>
+              <p>
+                Missing {ingredientAdded.length} ingredient
+                {ingredientAdded.length === 1 ? null : 's'}
+              </p>
             ) : null}
           </div>
         </div>

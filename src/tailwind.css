@@ -1,15 +1,18 @@
 @tailwind base;
 
+/* purgecss start ignore */
 a {
   @apply text-orange-600;
 }
 a:hover {
   hover: text-re-400;
 }
+/* purgecss end ignore */
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @tailwind components;
 
+/* purgecss start ignore */
 /* Header Styles */
 
 .header {
@@ -40,7 +43,7 @@ a:hover {
 }
 
 .react-autosuggest__input {
-  @apply bg-white px-4 py-3 rounded-md w-full border border-orange-400;
+  @apply bg-white px-4 py-3 rounded-md w-full border border-orange-400 font-body text-base;
 }
 .react-autosuggest__input--focused {
   @apply outline-none border-orange-500;
@@ -89,5 +92,6 @@ a:hover {
 .popup-content {
   @apply border-0 w-full max-w-3xl p-0 overflow-hidden relative !important;
 }
+/* purgecss end ignore */
 
 @tailwind utilities;

@@ -28,7 +28,7 @@ const Main = () => {
     setLoading(true);
     try {
       const recipes = await axios.get(
-        `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${encodedIngredients}&number=30&ranking=2&ignorePantry=false&apiKey=${process.env.REACT_APP_API_KEY}`
+        `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${encodedIngredients}&number=30&ranking=2&ignorePantry=true&apiKey=${process.env.REACT_APP_API_KEY}`
       );
       console.log(recipes.data);
 
