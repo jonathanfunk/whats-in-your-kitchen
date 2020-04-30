@@ -27,19 +27,19 @@ const Main = () => {
     setMessage('');
     setLoading(true);
     try {
-      const recipes = await axios.get(
-        `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${encodedIngredients}&number=30&ranking=2&ignorePantry=true&apiKey=${process.env.REACT_APP_API_KEY}`
-      );
-      console.log(recipes.data);
+      // const recipes = await axios.get(
+      //   `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${encodedIngredients}&number=30&ranking=2&ignorePantry=true&apiKey=${process.env.REACT_APP_API_KEY}`
+      // );
+      // console.log(recipes.data);
 
-      if (recipes.data.length === 0) {
+      if (mockData.length === 0) {
         setMessage(
           "Darn! Can't find any recipes. Try adding more ingredients."
         );
       } else {
         setMessage('');
       }
-      setRecipes(recipes.data);
+      setRecipes(mockData);
       setLoading(false);
     } catch (err) {
       setError(true);

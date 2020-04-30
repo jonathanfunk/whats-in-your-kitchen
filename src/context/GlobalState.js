@@ -4,8 +4,9 @@ import AppReducer from './AppReducer';
 // Initial state
 const initialState = {
   ingredients: JSON.parse(localStorage.getItem('ingredients')) || [],
+  faves: [],
   recipes: null,
-  loading: false
+  loading: false,
 };
 
 // Create context
@@ -23,14 +24,25 @@ export const GlobalProvider = ({ children }) => {
   function deleteIngredient(id) {
     dispatch({
       type: 'DELETE_INGREDIENT',
-      payload: id
+      payload: id,
     });
   }
-
   function addIngredient(ingredient) {
     dispatch({
       type: 'ADD_INGREDIENT',
-      payload: ingredient
+      payload: ingredient,
+    });
+  }
+  function deleteFave(id) {
+    dispatch({
+      type: 'DELETE_FAVE',
+      payload: id,
+    });
+  }
+  function addFave(fave) {
+    dispatch({
+      type: 'ADD_FAVE',
+      payload: fave,
     });
   }
 
@@ -38,8 +50,11 @@ export const GlobalProvider = ({ children }) => {
     <GlobalContext.Provider
       value={{
         ingredients: state.ingredients,
+        faves: state.faves,
         deleteIngredient,
-        addIngredient
+        addIngredient,
+        deleteFave,
+        addFave,
       }}
     >
       {children}
