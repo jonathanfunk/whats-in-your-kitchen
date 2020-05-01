@@ -7,7 +7,7 @@ const IngredientsList = () => {
   const { ingredients } = useContext(GlobalContext);
   return (
     <ul className="min-h-20">
-      {ingredients.map(ingredient => (
+      {ingredients.map((ingredient) => (
         <Ingredient key={ingredient.id} ingredient={ingredient} />
       ))}
     </ul>

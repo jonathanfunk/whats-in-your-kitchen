@@ -1,8 +1,27 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import RecipeCard from './RecipeCard';
 import Placeholder from './Placeholder';
 
-const RecipesList = ({ recipes, loading }) => {
+const RecipesList = ({ faveRecipes, recipes, loading }) => {
+  let faveRecipeItems;
+  if (loading) {
+    faveRecipeItems = null;
+  } else if (faveRecipes.length > 0) {
+    faveRecipeItems = (
+      <Fragment>
+        {faveRecipes.map((recipe) => (
+          <RecipeCard
+            key={recipe.id}
+            id={recipe.id}
+            title={recipe.title}
+            image={recipe.image}
+            missingIngredients={recipe.missedIngredients}
+          />
+        ))}
+      </Fragment>
+    );
+  }
+
   let recipeItems;
   if (recipes === null || loading) {
     let placeHolders = [];
@@ -12,7 +31,7 @@ const RecipesList = ({ recipes, loading }) => {
     recipeItems = <div className="recipe-grid">{placeHolders}</div>;
   } else if (recipes.length > 0) {
     recipeItems = (
-      <div className="recipe-grid mb-10">
+      <Fragment>
         {recipes.map((recipe) => (
           <RecipeCard
             key={recipe.id}
@@ -22,10 +41,16 @@ const RecipesList = ({ recipes, loading }) => {
             missingIngredients={recipe.missedIngredients}
           />
         ))}
-      </div>
+      </Fragment>
     );
   }
-  return <div>{recipeItems}</div>;
+
+  return (
+    <div className="recipe-grid mb-10">
+      {faveRecipeItems}
+      {recipeItems}
+    </div>
+  );
 };
 
 export default RecipesList;

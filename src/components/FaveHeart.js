@@ -20,13 +20,12 @@ const FaveHeart = ({ id, title, image }) => {
       id,
       title,
       image,
+      missedIngredients: [],
     };
     if (!faves.some((fave) => fave.id === id)) {
       addFave(newFave);
-      //setFave(true);
     } else {
       deleteFave(id);
-      //setFave(false);
     }
   };
   return (

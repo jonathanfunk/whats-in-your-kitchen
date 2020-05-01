@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import axios from 'axios';
 import RecipesList from './RecipesList';
 import Footer from './Footer';
@@ -7,13 +7,17 @@ import { GlobalContext } from '../context/GlobalState';
 import mockData from './../mockData';
 
 const Main = () => {
+  const { ingredients, faves } = useContext(GlobalContext);
+
   const [message, setMessage] = useState(
-    'Add ingredients then click "Fetch Recipes". Try to add as many ingredients as you can for better results.'
+    faves.length
+      ? ''
+      : 'Add ingredients then click "Fetch Recipes". Try to add as many ingredients as you can for better results.'
   );
   const [recipes, setRecipes] = useState([]);
+  const [faveRecipes, setFaveRecipes] = useState(faves || []);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
-  const { ingredients } = useContext(GlobalContext);
 
   const mergedIngredients = ingredients.map((ingredient) => {
     return encodeURIComponent(ingredient.value);
@@ -39,7 +43,17 @@ const Main = () => {
       } else {
         setMessage('');
       }
-      setRecipes(mockData);
+      setFaveRecipes(faves);
+
+      const faveIds = faves.map((fave) => fave.id).join(', ');
+
+      const filteredRecipes = mockData.filter(
+        (recipe) => !faveIds.includes(recipe.id)
+      );
+
+      console.log(filteredRecipes);
+
+      setRecipes(filteredRecipes);
       setLoading(false);
     } catch (err) {
       setError(true);
@@ -65,7 +79,11 @@ const Main = () => {
             </button>
           </div>
           <p className="text-l">{message}</p>
-          <RecipesList recipes={recipes} loading={loading} />
+          <RecipesList
+            recipes={recipes}
+            faveRecipes={faveRecipes}
+            loading={loading}
+          />
         </div>
       </section>
       <Footer />

@@ -4,7 +4,7 @@ import AppReducer from './AppReducer';
 // Initial state
 const initialState = {
   ingredients: JSON.parse(localStorage.getItem('ingredients')) || [],
-  faves: [],
+  faves: JSON.parse(localStorage.getItem('faves')) || [],
   recipes: null,
   loading: false,
 };
@@ -18,7 +18,8 @@ export const GlobalProvider = ({ children }) => {
 
   useEffect(() => {
     localStorage.setItem('ingredients', JSON.stringify(state.ingredients));
-  }, [state.ingredients]);
+    localStorage.setItem('faves', JSON.stringify(state.faves));
+  }, [state.ingredients, state.faves]);
 
   // Actions
   function deleteIngredient(id) {
