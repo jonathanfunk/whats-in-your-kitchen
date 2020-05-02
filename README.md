@@ -1,8 +1,9 @@
 # What's in your kitchen?
+![whats-in-your-kitchen-mock](https://user-images.githubusercontent.com/20465505/80872323-02380500-8c66-11ea-91ba-11602226bf40.jpg)
 
 ## Project
 
-This is a recipe application powered by React & (Spoonacular API)[https://spoonacular.com/]. Users can discover what they can make by taking note of what's in their fridge or pantry
+This is a recipe application powered by React & [Spoonacular API](https://spoonacular.com/). Users can discover what they can make by taking note of what's in their fridge or pantry
 
 ## Technology
 
@@ -16,7 +17,7 @@ This is a recipe application powered by React & (Spoonacular API)[https://spoona
 
 ## Learning Experience
 
-Being stuck at home due to the Coronavirus & my love for baking drove me to build this application. This project also allowed me to try out Hooks & Context API along with Tailwind CSS. For pulling recipe data based on a list of ingredients, the (Spoonacular API)[https://spoonacular.com/] is the right tool for the job. This API is used my many companies in the cooking, health & fitness industry.
+Being stuck at home due to the Coronavirus & my love for baking drove me to build this application. This project also allowed me to try out Hooks & Context API along with Tailwind CSS. For pulling recipe data based on a list of ingredients, the [Spoonacular API](https://spoonacular.com/) is the right tool for the job. This API is used my many companies in the cooking, health & fitness industry.
 
 ### Add Ingredients Functionality
 
@@ -28,4 +29,4 @@ Initially, when I created the recipes list, I would only populate the list with 
 
 ### Tailwind CSS
 
-This project was styled using (Tailwind CSS)[https://tailwindcss.com/], a utility first CSS framework. Unlike tools like Bootstrap & Bulma, you can build your own components from scratch as opposed to fighting premade components to get the design you are looking for. There is a learning curve but doubled with the Tailwind CSS IntelliSense extension for VS Code, working with Tailwind CSS is a breeze.
+This project was styled using [Tailwind CSS](https://tailwindcss.com/), a utility first CSS framework. Unlike tools like Bootstrap & Bulma, you can build your own components from scratch as opposed to fighting premade components to get the design you are looking for. There is a learning curve but doubled with the Tailwind CSS IntelliSense extension for VS Code, working with Tailwind CSS is a breeze.
