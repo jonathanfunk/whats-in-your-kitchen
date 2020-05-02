@@ -28,7 +28,7 @@ const RecipesList = ({ faveRecipes, recipes, loading }) => {
     for (let i = 0; i < 9; i++) {
       placeHolders.push(<Placeholder key={i} />);
     }
-    recipeItems = <div className="recipe-grid">{placeHolders}</div>;
+    recipeItems = <Fragment>{placeHolders}</Fragment>;
   } else if (recipes.length > 0) {
     recipeItems = (
       <Fragment>

@@ -31,10 +31,9 @@ const Main = () => {
     setMessage('');
     setLoading(true);
     try {
-      // const recipes = await axios.get(
-      //   `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${encodedIngredients}&number=30&ranking=2&ignorePantry=true&apiKey=${process.env.REACT_APP_API_KEY}`
-      // );
-      // console.log(recipes.data);
+      const recipes = await axios.get(
+        `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${encodedIngredients}&number=30&ranking=2&ignorePantry=true&apiKey=${process.env.REACT_APP_API_KEY}`
+      );
 
       if (mockData.length === 0) {
         setMessage(
@@ -46,8 +45,7 @@ const Main = () => {
       setFaveRecipes(faves);
 
       const faveIds = faves.map((fave) => fave.id).join(', ');
-
-      const filteredRecipes = mockData.filter(
+      const filteredRecipes = recipes.data.filter(
         (recipe) => !faveIds.includes(recipe.id)
       );
 
